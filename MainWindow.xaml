@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Canvas Background="#FFB5DBED">
+        <Canvas Height="368" Width="206" Background="#FFFDB1B1" Canvas.Left="36" Canvas.Top="42" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Label Content="Name" Canvas.Left="10" Canvas.Top="10"/>
+            <TextBox x:Name="txtName" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="41" Width="166" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Label Content="Balance" Canvas.Left="10" Canvas.Top="70" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtBalance" Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="101" Width="166" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <ComboBox x:Name="cmbAccountTypes" Canvas.Left="10" Canvas.Top="165" Width="166" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Button x:Name="btnAddAccount" Content="Add Account" Canvas.Left="19" Canvas.Top="312" HorizontalAlignment="Center" VerticalAlignment="Top" Width="148" Height="36" Click="btnAddAccount_Click"/>
+            <TextBox x:Name="txtFilePath" Canvas.Left="19" TextWrapping="NoWrap" Canvas.Top="210" Width="157" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button x:Name="btnSelectPicture" Content="Picture" Canvas.Left="49" Canvas.Top="247" HorizontalAlignment="Center" VerticalAlignment="Top" Width="88" Click="btnSelectPicture_Click"/>
+        </Canvas>
+        <ListBox x:Name="lbAccounts" Height="326" Width="244" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="262" Canvas.Top="46" HorizontalAlignment="Left" VerticalAlignment="Center" SelectionChanged="lbAccounts_SelectionChanged"/>
+        <Image x:Name="imgCustomer" Height="318" Canvas.Left="531" Canvas.Top="52" Width="223"/>
 
     </Canvas>
 </Window>
